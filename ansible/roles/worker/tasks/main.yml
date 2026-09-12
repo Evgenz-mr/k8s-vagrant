@@ -1,0 +1,10 @@
+---
+- name: Wait for control-plane join command
+  wait_for:
+    path: /vagrant/join-command.sh
+    timeout: 600
+
+- name: Join worker to Kubernetes cluster
+  command: sh /vagrant/join-command.sh
+  args:
+    creates: /etc/kubernetes/kubelet.conf
