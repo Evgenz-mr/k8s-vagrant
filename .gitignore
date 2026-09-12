@@ -1,0 +1,4 @@
+.vagrant/
+*.log
+join-command.sh
+kubeconfig
